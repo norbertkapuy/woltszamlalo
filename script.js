@@ -29,7 +29,7 @@ function addOrder() {
         description: descriptionInput.value || 'No description'
     };
     
-    fetch('/api/expenses', {
+    fetch('/api/expenses/create', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
