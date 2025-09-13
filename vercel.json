@@ -1,10 +1,51 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/api/expenses", "destination": "/api/expenses" },
-    { "source": "/api/expenses/create", "destination": "/api/expenses/create" },
-    { "source": "/api/expenses/:id", "destination": "/api/expenses/[id]" },
-    { "source": "/api/summary", "destination": "/api/summary" },
-    { "source": "/api/months", "destination": "/api/months" }
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "script.js",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/expenses",
+      "dest": "/api/expenses.js"
+    },
+    {
+      "src": "/api/expenses/create",
+      "dest": "/api/expenses/create.js"
+    },
+    {
+      "src": "/api/expenses/(.*)",
+      "dest": "/api/expenses/[id].js"
+    },
+    {
+      "src": "/api/summary",
+      "dest": "/api/summary.js"
+    },
+    {
+      "src": "/api/months",
+      "dest": "/api/months.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
