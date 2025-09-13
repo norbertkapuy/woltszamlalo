@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/expenses",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/api/expenses/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/api/summary",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/api/months",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
