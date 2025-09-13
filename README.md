@@ -17,8 +17,14 @@ A web application to track and calculate your food order expenses with a permane
 
 ## Installation
 
-1. Clone or download this repository
-2. Navigate to the project directory
+1. Clone this repository:
+   ```
+   git clone https://github.com/norbertkapuy/woltszamlalo.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd woltszamlalo
+   ```
 3. Install dependencies:
    ```
    npm install
