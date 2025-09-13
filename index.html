@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Food Order Expense Tracker</h1>
+            <p>Track and calculate your monthly food spending</p>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <h2>Add New Order</h2>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="order-date">Date:</label>
+                        <input type="date" id="order-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="order-amount">Amount (Ft):</label>
+                        <input type="number" id="order-amount" min="0" step="100" placeholder="Enter amount" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="order-description">Description (Optional):</label>
+                        <input type="text" id="order-description" placeholder="What did you order?">
+                    </div>
+                    
+                    <button type="submit">Add Order</button>
+                </form>
+            </section>
+            
+            <section class="summary-section">
+                <h2>Monthly Summary</h2>
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <span class="summary-label">Selected Month:</span>
+                        <select id="month-selector">
+                            <option value="">Select a month</option>
+                        </select>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Number of Orders:</span>
+                        <span id="order-count">0</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Total Spending:</span>
+                        <span id="total-amount">0 Ft</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Average per Order:</span>
+                        <span id="average-amount">0 Ft</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="orders-section">
+                <h2>Order History</h2>
+                <div id="orders-container">
+                    <p id="no-orders-message">No orders added yet. Start by adding your first order!</p>
+                    <ul id="orders-list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
