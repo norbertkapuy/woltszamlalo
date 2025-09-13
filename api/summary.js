@@ -1,9 +1,9 @@
-import { initializeData, readData } from '../utils/data.js';
+const { initializeData, readData } = require('../utils/data.js');
 
 // Initialize data on startup
 initializeData();
 
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   // Get summary data
   try {
     const { month } = req.query;

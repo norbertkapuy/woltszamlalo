@@ -2,7 +2,6 @@
   "name": "food-order-tracker",
   "version": "1.0.0",
   "description": "A web application to track and calculate food order expenses",
-  "type": "module",
   "scripts": {
     "start": "node api/server.js",
     "dev": "node api/server.js"
