@@ -1,31 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/expenses.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/expenses/create.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/expenses/[id].js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/summary.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/months.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/expenses",
@@ -46,10 +20,6 @@
     {
       "src": "/api/months",
       "dest": "/api/months.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.js"
     }
   ]
 }
