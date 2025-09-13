@@ -1,25 +1,3 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/api/expenses",
-      "dest": "/api/expenses.js"
-    },
-    {
-      "src": "/api/expenses/create",
-      "dest": "/api/expenses/create.js"
-    },
-    {
-      "src": "/api/expenses/(.*)",
-      "dest": "/api/expenses/[id].js"
-    },
-    {
-      "src": "/api/summary",
-      "dest": "/api/summary.js"
-    },
-    {
-      "src": "/api/months",
-      "dest": "/api/months.js"
-    }
-  ]
+  "version": 2
 }
